@@ -13,19 +13,20 @@ spring:
       suffix: .jsp
       
   datasource:
-    driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://localhost:3306/photogram?serverTimezone=Asia/Seoul
-    username: cos
-    password: cos1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/photogram?serverTimezone=Asia/Seoul
+    username: root
+    password: 1234
     
   jpa:
     open-in-view: true
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     show-sql: true
-      
+
   servlet:
     multipart:
       enabled: true
@@ -34,7 +35,7 @@ spring:
   security:
     user:
       name: test
-      password: 1234   
+      password: 1234
 
 file:
-  path: C:/workspace/springbootwork/upload/
+  path: ~/Users/junhyungpplee/Downloads/upload

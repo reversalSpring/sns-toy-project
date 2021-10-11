@@ -32,8 +32,6 @@
 ### 데이터베이스
 
 ```sql
-create user 'cos'@'%' identified by 'cos1234';
-GRANT ALL PRIVILEGES ON *.* TO 'cos'@'%';
 create database photogram;
 ```
 
@@ -55,10 +53,10 @@ spring:
       suffix: .jsp
       
   datasource:
-    driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://localhost:3306/costa?serverTimezone=Asia/Seoul
-    username: costa
-    password: costa1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysqldb://localhost:3306/costa?serverTimezone=Asia/Seoul
+    username: root
+    password: 1234
     
   jpa:
     open-in-view: true
